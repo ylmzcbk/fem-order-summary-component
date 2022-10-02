@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "Red Hat Display";
+  src: url(./red-hat.ttf) format("truetype");
+}
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+
+  --font-red-hat-display: "Red Hat Display", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  font: var(--font-red-hat-display);
+  font-size: 1.6rem;
+  background-image: url("./images/pattern-background-mobile.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url("./images/pattern-background-desktop.svg");
+  }
+}
+
+.blue-text {
+  color: var(--desaturated-blue);
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+.font-weight-900 {
+  font-weight: 900;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radius {
+  border-radius: 1.75rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 37.5rem;
+  max-width: 37.5rem;
+
+  overflow: hidden;
+  background-color: white;
+
+  text-align: center;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.card__description {
+  line-height: 2.4rem;
+}
+.card__plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 100%;
+  padding: 2rem;
+  background-color: var(--very-pale-blue);
+}
+
+.card__plan-change {
+  text-decoration: underline;
+  color: var(--bright-blue);
+}
+
+.plan__show {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.plan__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.function__proceed {
+  background-color: var(--bright-blue);
+  color: white;
+  padding: 2rem;
+  border: none;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.function__cancel {
+  background-color: #ffff;
+  color: var(--desaturated-blue);
+  padding: 2rem;
+  border: none;
+  width: 100%;
+  font-size: 1.5rem;
+}
