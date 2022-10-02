@@ -114,6 +114,11 @@ body {
   color: var(--bright-blue);
 }
 
+.card__plan-change:hover {
+  text-decoration: none;
+  color: hsl(245, 75%, 75%);
+}
+
 .plan__show {
   display: flex;
   flex-direction: row;
