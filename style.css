@@ -6,6 +6,7 @@
 :root {
   --pale-blue: hsl(225, 100%, 94%);
   --bright-blue: hsl(245, 75%, 52%);
+
   --very-pale-blue: hsl(225, 100%, 98%);
   --desaturated-blue: hsl(224, 23%, 55%);
   --dark-blue: hsl(223, 47%, 23%);
@@ -17,6 +18,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 html {
@@ -128,16 +130,23 @@ body {
   background-color: var(--bright-blue);
   color: white;
   padding: 2rem;
-  border: none;
   width: 100%;
   font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.function__proceed:hover {
+  background-color: hsl(245, 75%, 75%);
 }
 
 .function__cancel {
   background-color: #ffff;
   color: var(--desaturated-blue);
-  padding: 2rem;
-  border: none;
-  width: 100%;
   font-size: 1.5rem;
+  text-decoration: none;
+  margin: 1rem 2rem;
+}
+
+.function__cancel:hover {
+  color: var(--dark-blue);
 }
